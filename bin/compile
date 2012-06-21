@@ -46,6 +46,9 @@ fi
 curl --silent --max-time 10 --location $MAVEN_SETTINGS_URL --output .m2/settings.xml
 echo " done"
 
+echo -n "-----> Removing swf-all from cached .m2" 
+rm -rf .m2/repository/com/github/venkatramanm/swf-all/
+
 # change to build dir to run maven
 cd $BUILD_DIR
 
