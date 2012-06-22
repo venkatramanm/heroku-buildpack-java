@@ -46,7 +46,7 @@ fi
 curl --silent --max-time 10 --location $MAVEN_SETTINGS_URL --output .m2/settings.xml
 echo " done"
 
-if [ -d "${BUILD_DIR}/repo" ]
+if [ -d "${BUILD_DIR}/repo" ]; then
   cd ${BUILD_DIR}/repo
   FILES=`find  ./ -type f  |sed 's@^\./@@'`
   for f in ${FILES}
