@@ -51,9 +51,9 @@ if [ -d "${BUILD_DIR}/repo" ]; then
   FILES=`find  ./ -type f  |sed 's@^\./@@'`
   for f in ${FILES}
   do 
-    echo -n "Removing ${CACHE_DIR}/.m2/repository/${f}"
+    echo -n "Removing ${CACHE_DIR}/.m2/repository/${f}....."
     rm -f ${CACHE_DIR}/.m2/repository/${f}
-    echo "done"
+    echo " done"
   done
 fi
 
